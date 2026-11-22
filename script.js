@@ -19,8 +19,30 @@ if (PROFIL.photo) {
 } else photo.remove();
 
 /* ---------- À propos ---------- */
+const ICONS = {
+  formation: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
+  entreprise: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/>',
+  lieu: '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/>',
+};
+const icon = (k) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[k] || ICONS.lieu}</svg>`;
+
 $("#about-text").innerHTML = PROFIL.apropos.map((p) => `<p>${esc(p)}</p>`).join("");
-$("#about-facts").innerHTML = PROFIL.infos.map(([i, t]) => `<li><span>${i}</span>${esc(t)}</li>`).join("");
+$("#profile-name").textContent = nomComplet;
+$("#profile-status").textContent = PROFIL.statut || "";
+const avatar = $("#profile-avatar");
+if (PROFIL.photo) { avatar.src = PROFIL.photo; avatar.onerror = () => avatar.remove(); } else avatar.remove();
+
+$("#about-facts").innerHTML = PROFIL.infos
+  .map(([k, label, val]) => `<li><span class="ico">${icon(k)}</span><span><small>${esc(label)}</small>${esc(val)}</span></li>`)
+  .join("");
+
+$("#roadmap").innerHTML = (PROFIL.objectif || [])
+  .map((e) => `<li class="${esc(e.etat)}"><span class="step"></span><strong>${esc(e.titre)}</strong><small>${esc(e.detail)}</small></li>`)
+  .join("");
+
+$("#interests").innerHTML = (typeof INTERETS !== "undefined" ? INTERETS : [])
+  .map((i) => `<div class="interest"><span class="emoji">${i.icone}</span><div><strong>${esc(i.titre)}</strong><p>${esc(i.desc)}</p></div></div>`)
+  .join("");
 
 /* ---------- Parcours ---------- */
 const timeline = (items) =>

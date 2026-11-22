@@ -45,9 +45,24 @@
     <section id="apropos">
       <div class="container">
         <h2><span class="num">01.</span> À propos</h2>
-        <div class="about-grid">
-          <div id="about-text"></div>
-          <ul class="about-facts" id="about-facts"></ul>
+        <div class="about-text" id="about-text"></div>
+        <div class="about-cards">
+          <article class="card profile-card">
+            <div class="profile-head">
+              <img id="profile-avatar" class="profile-avatar" alt="" />
+              <div>
+                <h3 id="profile-name"></h3>
+                <span class="status"><span class="dot"></span><span id="profile-status"></span></span>
+              </div>
+            </div>
+            <ul class="profile-infos" id="about-facts"></ul>
+            <h4 class="card-label">Mon objectif</h4>
+            <ol class="roadmap" id="roadmap"></ol>
+          </article>
+          <article class="card interests-card">
+            <h4 class="card-label">Centres d'intérêt</h4>
+            <div class="interests" id="interests"></div>
+          </article>
         </div>
       </div>
     </section>

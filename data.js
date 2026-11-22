@@ -14,13 +14,20 @@ const PROFIL = {
     "Curieux et autonome, j'aime comprendre comment fonctionnent les systèmes et les réseaux, et trouver par moi-même des solutions aux problèmes que je rencontre.",
     "L'alternance me permet de faire le lien entre la théorie et le terrain : ce que j'apprends en formation, je le mets en pratique en entreprise, et chaque situation rencontrée en entreprise enrichit à son tour ma compréhension des cours.",
     "Rigoureux et à l'écoute, j'accorde de l'importance au travail bien fait, à la documentation et à la qualité du service rendu aux utilisateurs. J'apprécie autant de travailler en équipe que de mener une tâche en autonomie.",
-    "Après mon BTS, je souhaite poursuivre en licence pour continuer à monter en compétences dans les systèmes et réseaux.",
+    "Mon objectif : poursuivre en licence après mon BTS, puis me spécialiser avec un master en cybersécurité.",
   ],
+  // Encadré « Profil »
+  statut: "Alternant chez Harmonie Mutuelle",
   infos: [
-    ["🎓", "BTS SIO SISR – Ensitech"],
-    ["🏢", "Alternance – Harmonie Mutuelle"],
-    ["📍", "Île-de-France"],
-    ["🎯", "Objectif : poursuite en licence"],
+    ["formation", "Formation", "BTS SIO SISR – Ensitech"],
+    ["entreprise", "Entreprise", "Harmonie Mutuelle, Châtillon"],
+    ["lieu", "Localisation", "Île-de-France"],
+  ],
+  // Mon parcours vers mon objectif (etat : "fait", "en-cours" ou "objectif")
+  objectif: [
+    { titre: "BTS SIO SISR", detail: "2025 – 2027", etat: "en-cours" },
+    { titre: "Licence", detail: "Après le BTS", etat: "a-venir" },
+    { titre: "Master Cybersécurité", detail: "Mon objectif", etat: "objectif" },
   ],
   email: "ouamar.yaccine@gmail.com",
   linkedin: "https://www.linkedin.com/in/yacine-ouamar-98b60a228/",
@@ -29,6 +36,14 @@ const PROFIL = {
   cv: "", // ex : "docs/cv.pdf" quand tu auras mis ton CV dans le dossier docs
   tableauSynthese: "", // ex : "docs/tableau-de-synthese.pdf"
 };
+
+/* CENTRES D'INTÉRÊT */
+const INTERETS = [
+  { icone: "✈️", titre: "Voyages", desc: "Vietnam, Sri Lanka, Maroc, Italie : découvrir d'autres cultures et sortir de ma zone de confort." },
+  { icone: "🥊", titre: "Sport", desc: "Boxe et football : discipline, persévérance et esprit d'équipe." },
+  { icone: "💡", titre: "Nouvelles technologies", desc: "Je suis les innovations du numérique et j'aime tester les nouveaux outils." },
+  { icone: "🎮", titre: "Gaming", desc: "Une passion qui m'a donné le goût de l'informatique et du matériel." },
+];
 
 const FORMATION = [
   { date: "2025 – 2027", titre: "BTS SIO option SISR (en alternance)", lieu: "Ensitech, Montigny-le-Bretonneux", detail: "Services informatiques aux organisations – Solutions d'infrastructure, systèmes et réseaux." },
