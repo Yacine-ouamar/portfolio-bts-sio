@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – BTS SIO SISR</title>
+  <meta name="description" content="Portfolio de compétences – BTS SIO option SISR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#accueil" class="logo"><span class="prompt">~$</span> <span id="nav-name">portfolio</span></a>
+      <button class="burger" aria-label="Ouvrir le menu" id="burger">☰</button>
+      <nav id="menu">
+        <a href="#apropos">À propos</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#competences">Compétences</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#synthese">Synthèse</a>
+        <a href="#veille">Veille</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ACCUEIL -->
+    <section id="accueil" class="hero">
+      <div class="container">
+        <p class="mono accent" id="hero-tag">BTS SIO · option SISR</p>
+        <h1 id="hero-name">Prénom Nom</h1>
+        <p class="hero-sub" id="hero-accroche"></p>
+        <div class="hero-actions">
+          <a href="#realisations" class="btn">Voir mes réalisations</a>
+          <a href="#" class="btn btn-ghost" id="btn-cv" target="_blank">Télécharger mon CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos">
+      <div class="container">
+        <h2><span class="num">01.</span> À propos</h2>
+        <div class="about-grid">
+          <div id="about-text"></div>
+          <ul class="about-facts" id="about-facts"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+      <div class="container">
+        <h2><span class="num">02.</span> Parcours</h2>
+        <div class="two-cols">
+          <div>
+            <h3>Formation</h3>
+            <ul class="timeline" id="formation"></ul>
+          </div>
+          <div>
+            <h3>Stages & expériences</h3>
+            <ul class="timeline" id="stages"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences">
+      <div class="container">
+        <h2><span class="num">03.</span> Compétences</h2>
+        <h3>Compétences du bloc 1 (référentiel BTS SIO)</h3>
+        <div class="cards-grid" id="bloc1"></div>
+        <h3 class="mt">Compétences techniques SISR</h3>
+        <div class="skills" id="tech"></div>
+        <h3 class="mt">Certifications</h3>
+        <div class="cards-grid small" id="certifs"></div>
+      </div>
+    </section>
+
+    <!-- RÉALISATIONS -->
+    <section id="realisations">
+      <div class="container">
+        <h2><span class="num">04.</span> Réalisations professionnelles</h2>
+        <div class="filters" id="filters">
+          <button class="filter active" data-f="Tous">Tous</button>
+          <button class="filter" data-f="Formation">En formation</button>
+          <button class="filter" data-f="Stage">En stage</button>
+        </div>
+        <div class="cards-grid" id="projets"></div>
+      </div>
+    </section>
+
+    <!-- SYNTHÈSE -->
+    <section id="synthese">
+      <div class="container">
+        <h2><span class="num">05.</span> Tableau de synthèse</h2>
+        <p class="muted">Correspondance entre mes réalisations et les compétences du bloc 1.</p>
+        <div class="table-wrap"><table id="matrix"></table></div>
+        <a href="#" class="btn btn-ghost mt-s" id="btn-synthese" target="_blank">Télécharger le tableau de synthèse officiel (PDF)</a>
+      </div>
+    </section>
+
+    <!-- VEILLE -->
+    <section id="veille">
+      <div class="container">
+        <h2><span class="num">06.</span> Veille technologique</h2>
+        <div class="veille" id="veille-content"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container center">
+        <h2><span class="num">07.</span> Contact</h2>
+        <p class="muted">Une question sur mon parcours ou mes projets ? N'hésitez pas à me contacter.</p>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer mono" id="footer"></footer>
+
+  <!-- Fenêtre de détail d'une réalisation -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
