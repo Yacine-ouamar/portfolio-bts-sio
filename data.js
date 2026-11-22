@@ -11,10 +11,11 @@ const PROFIL = {
   accroche:
     "Étudiant en 2ᵉ année de BTS SIO option SISR en alternance chez Harmonie Mutuelle. J'administre, sécurise et fais évoluer des infrastructures systèmes et réseaux.",
   apropos: [
-    "Je suis en 2ᵉ année de BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Ensitech de Montigny-le-Bretonneux, en alternance chez Harmonie Mutuelle à Châtillon.",
-    "En formation, je travaille sur l'administration Windows Server, les réseaux Cisco, la virtualisation, la sécurisation des infrastructures et la gestion de parc.",
-    "En entreprise, je gère les droits d'accès des utilisateurs, j'automatise des contrôles et je participe à la recette d'applications.",
-    "Après mon BTS, je souhaite poursuivre en licence.",
+    "Curieux et autonome, j'aime comprendre comment fonctionnent les systèmes et les réseaux, et trouver par moi-même des solutions aux problèmes que je rencontre.",
+    "L'alternance me permet de faire le lien entre la théorie et le terrain : ce que j'apprends en formation, je le mets en pratique en entreprise, et chaque situation rencontrée en entreprise enrichit à son tour ma compréhension des cours.",
+    "Rigoureux et à l'écoute, j'accorde de l'importance au travail bien fait, à la documentation et à la qualité du service rendu aux utilisateurs. J'apprécie autant de travailler en équipe que de mener une tâche en autonomie.",
+    "Après mon BTS, je souhaite poursuivre en licence pour continuer à monter en compétences dans les systèmes et réseaux.",
+  ],",
   ],
   infos: [
     ["🎓", "BTS SIO SISR – Ensitech"],
