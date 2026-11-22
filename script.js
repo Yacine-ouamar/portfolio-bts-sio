@@ -8,8 +8,8 @@ $("#nav-name").textContent = PROFIL.prenom.toLowerCase();
 $("#hero-name").textContent = nomComplet;
 $("#hero-tag").textContent = PROFIL.titre;
 $("#hero-accroche").textContent = PROFIL.accroche;
-$("#btn-cv").href = PROFIL.cv;
-$("#btn-synthese").href = PROFIL.tableauSynthese;
+if (PROFIL.cv) $("#btn-cv").href = PROFIL.cv; else $("#btn-cv").remove();
+if (PROFIL.tableauSynthese) $("#btn-synthese").href = PROFIL.tableauSynthese; else $("#btn-synthese").remove();
 
 /* ---------- À propos ---------- */
 $("#about-text").innerHTML = PROFIL.apropos.map((p) => `<p>${esc(p)}</p>`).join("");
@@ -23,7 +23,7 @@ const timeline = (items) =>
         <span class="mono accent small">${esc(e.date)}</span>
         <strong>${esc(e.titre)}</strong>
         <span class="muted">${esc(e.lieu)}</span>
-        <p>${esc(e.detail)}</p>
+        ${e.detail ? `<p>${esc(e.detail)}</p>` : ""}
       </li>`
     )
     .join("");
@@ -48,7 +48,8 @@ $("#tech").innerHTML = Object.entries(TECH)
   )
   .join("");
 
-$("#certifs").innerHTML = CERTIFS.map(
+if (!CERTIFS.length) { $("#certifs").previousElementSibling.remove(); $("#certifs").remove(); }
+else $("#certifs").innerHTML = CERTIFS.map(
   (c) => `<article class="card">
     <h4>${esc(c.titre)}</h4>
     <p class="muted">${esc(c.org)} · ${esc(c.annee)}</p>
@@ -63,7 +64,7 @@ function renderProjets(filtre = "Tous") {
     .map(
       (r) => `<article class="card project" data-id="${r.id}" tabindex="0">
         <div class="card-top">
-          <span class="pill ${r.contexte === "Stage" ? "pill-stage" : ""}">${esc(r.contexte)}</span>
+          <span class="pill ${r.contexte !== "Formation" ? "pill-stage" : ""}">${esc(r.contexte)}</span>
           <span class="mono small muted">${esc(r.periode)}</span>
         </div>
         <h4>${esc(r.titre)}</h4>
@@ -93,7 +94,7 @@ function openProjet(id) {
   const d = r.details;
   const comps = BLOC1.filter((c) => r.competences.includes(c.id));
   $("#modal-content").innerHTML = `
-    <span class="pill ${r.contexte === "Stage" ? "pill-stage" : ""}">${esc(r.contexte)} · ${esc(r.periode)}</span>
+    <span class="pill ${r.contexte !== "Formation" ? "pill-stage" : ""}">${esc(r.contexte)} · ${esc(r.periode)}</span>
     <h3>${esc(r.titre)}</h3>
     <div class="tags">${r.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
     <h4>Contexte</h4><p>${esc(d.contexte)}</p>
@@ -140,7 +141,8 @@ $("#matrix").addEventListener("click", (e) => {
 });
 
 /* ---------- Veille ---------- */
-$("#veille-content").innerHTML = `
+if (!VEILLE.intro && !VEILLE.articles.length) { $("#veille").remove(); document.querySelector('#menu a[href="#veille"]').remove(); }
+else $("#veille-content").innerHTML = `
   <div class="card veille-intro">
     <span class="mono accent small">Sujet</span>
     <h3>${esc(VEILLE.sujet)}</h3>
