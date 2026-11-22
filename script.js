@@ -11,6 +11,13 @@ $("#hero-accroche").textContent = PROFIL.accroche;
 if (PROFIL.cv) $("#btn-cv").href = PROFIL.cv; else $("#btn-cv").remove();
 if (PROFIL.tableauSynthese) $("#btn-synthese").href = PROFIL.tableauSynthese; else $("#btn-synthese").remove();
 
+const photo = $("#hero-photo");
+if (PROFIL.photo) {
+  photo.src = PROFIL.photo;
+  photo.alt = `Photo de ${nomComplet}`;
+  photo.onerror = () => photo.remove();
+} else photo.remove();
+
 /* ---------- À propos ---------- */
 $("#about-text").innerHTML = PROFIL.apropos.map((p) => `<p>${esc(p)}</p>`).join("");
 $("#about-facts").innerHTML = PROFIL.infos.map(([i, t]) => `<li><span>${i}</span>${esc(t)}</li>`).join("");

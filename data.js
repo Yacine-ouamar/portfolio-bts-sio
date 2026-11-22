@@ -25,6 +25,7 @@ const PROFIL = {
   email: "ouamar.yaccine@gmail.com",
   linkedin: "https://www.linkedin.com/in/yacine-ouamar-98b60a228/",
   github: "https://github.com/Yacine-ouamar",
+  photo: "photo.jpg", // mets ta photo dans le dossier portfolio avec ce nom (laisse "" pour ne pas en afficher)
   cv: "", // ex : "docs/cv.pdf" quand tu auras mis ton CV dans le dossier docs
   tableauSynthese: "", // ex : "docs/tableau-de-synthese.pdf"
 };
@@ -195,6 +196,30 @@ const REALISATIONS = [
         "Gestion des snapshots et des ressources allouées",
       ],
       resultat: "Infrastructure virtualisée servant de base aux autres projets.",
+    },
+    docs: [],
+  },
+
+  {
+    id: "bacula",
+    titre: "Sauvegarde et restauration avec Bacula",
+    contexte: "Formation",
+    periode: "BTS SIO",
+    resume: "Installation de Bacula pour sauvegarder automatiquement les données des serveurs et vérifier leur restauration.",
+    tags: ["Bacula", "Linux", "Sauvegarde", "Restauration", "Continuité"],
+    competences: ["C1", "C5"],
+    details: {
+      contexte: "Une organisation doit pouvoir récupérer ses données en cas de panne, d'erreur humaine ou d'attaque (rançongiciel).",
+      objectifs: ["Automatiser les sauvegardes des serveurs", "Vérifier que les données peuvent être restaurées"],
+      etapes: [
+        "Installation du serveur Bacula : Director, Storage Daemon et catalogue (base de données)",
+        "Installation de l'agent Bacula (File Daemon) sur les machines à sauvegarder",
+        "Définition des jobs : quelles données, quel type de sauvegarde (complète, incrémentale, différentielle)",
+        "Planification automatique des sauvegardes (Schedule)",
+        "Lancement et suivi des sauvegardes avec bconsole",
+        "Test de restauration de fichiers pour vérifier que la sauvegarde est exploitable",
+      ],
+      resultat: "Sauvegardes automatisées et restauration testée avec succès.",
     },
     docs: [],
   },
