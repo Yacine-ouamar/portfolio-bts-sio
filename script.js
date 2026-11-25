@@ -26,7 +26,10 @@ const ICONS = {
 };
 const icon = (k) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[k] || ICONS.lieu}</svg>`;
 
-$("#about-text").innerHTML = PROFIL.apropos.map((p) => `<p>${esc(p)}</p>`).join("");
+const fmt = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+$("#about-text").innerHTML = PROFIL.apropos
+  .map((p, i, all) => `<p class="${i === 0 ? "lead" : i === all.length - 1 ? "goal" : ""}">${fmt(p)}</p>`)
+  .join("");
 $("#profile-name").textContent = nomComplet;
 $("#profile-status").textContent = PROFIL.statut || "";
 const avatar = $("#profile-avatar");
