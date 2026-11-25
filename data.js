@@ -11,7 +11,7 @@ const PROFIL = {
   accroche:
     "Étudiant en 2ᵉ année de BTS SIO option SISR, en alternance chez Harmonie Mutuelle en tant quePoste chargé de projet SI.",
   apropos: [
-    "Curieux et autonome, j'aime comprendre comment fonctionnent les systèmes et les réseaux, et trouver par moi-même des solutions aux problèmes que je rencontre.",
+    "Curieux et autonome, L'informatique est un domaine qui m'attire depuis longtemps. Après une première expérience professionnelle en tant que gestionnaire en prévoyance, j'ai choisi de m'y consacrer pleinement : ce qui me motive, c'est de comprendre comment fonctionnent et de trouver des solutions concrètes aux problèmes rencontrés.",
     "L'alternance me permet de faire le lien entre la théorie et le terrain : ce que j'apprends en formation, je le mets en pratique en entreprise, et chaque situation rencontrée en entreprise enrichit à son tour ma compréhension des cours.",
     "Rigoureux et à l'écoute, j'accorde de l'importance au travail bien fait, à la documentation et à la qualité du service rendu aux utilisateurs. J'apprécie autant de travailler en équipe que de mener une tâche en autonomie.",
     "Mon objectif : poursuivre en licence après mon BTS, puis me spécialiser avec un master en cybersécurité.",
