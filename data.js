@@ -57,8 +57,8 @@ const STAGES = [
     titre: "Alternant – BTS SIO SISR",
     lieu: "Harmonie Mutuelle, Châtillon",
     detail:"Gestion des droits d'accès des utilisateurs, appels d'API, automatisation des systèmes de contrôle, recette d'une interface.",
-    
-    date: "2023 – 2025",
+  } 
+  {date: "2023 – 2025",
     titre: "Gestionnaire en prévoyance",
     lieu: "Mutex, Chatillon",
     detail:"Gestion de dossiers d'assurés et utilisation quotidienne des applications métier."
