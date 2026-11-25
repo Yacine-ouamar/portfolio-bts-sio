@@ -34,7 +34,7 @@ const PROFIL = {
   github: "https://github.com/Yacine-ouamar",
   photo: "photo.jpg", // mets ta photo dans le dossier portfolio avec ce nom (laisse "" pour ne pas en afficher)
   cv: "", // ex : "docs/cv.pdf" quand tu auras mis ton CV dans le dossier docs
-  tableauSynthese: "", // ex : "docs/tableau-de-synthese.pdf"
+  tableauSynthese: "docs/tableau-de-synthese.xlsx", // ex : "docs/tableau-de-synthese.pdf"
 };
 
 /* CENTRES D'INTÉRÊT */
