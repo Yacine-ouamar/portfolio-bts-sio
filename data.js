@@ -9,7 +9,7 @@ const PROFIL = {
   nom: "Ouamar",
   titre: "Étudiant en BTS SIO option SISR · en alternance",
   accroche:
-    "Étudiant en 2ᵉ année de BTS SIO option SISR, en alternance chez Harmonie Mutuelle en tant quePoste chargé de projet SI.",
+    "Étudiant en 2ᵉ année de BTS SIO option SISR, en alternance chez Harmonie Mutuelle en tant que Poste chargé de projet SI.",
   apropos: [
     "Curieux et autonome, L'informatique est un domaine qui m'attire depuis longtemps. Après une première expérience professionnelle en tant que gestionnaire en prévoyance, j'ai choisi de m'y consacrer pleinement : ce qui me motive, c'est de comprendre comment fonctionnent et de trouver des solutions concrètes aux problèmes rencontrés.",
     "L'alternance me permet de faire le lien entre la théorie et le terrain : ce que j'apprends en formation, je le mets en pratique en entreprise, et chaque situation rencontrée en entreprise enrichit à son tour ma compréhension des cours.",
@@ -34,7 +34,7 @@ const PROFIL = {
   github: "https://github.com/Yacine-ouamar",
   photo: "photo.jpg", // mets ta photo dans le dossier portfolio avec ce nom (laisse "" pour ne pas en afficher)
   cv: "", // ex : "docs/cv.pdf" quand tu auras mis ton CV dans le dossier docs
-  tableauSynthese: "docs/tableau-de-synthese.xlsx", // ex : "docs/tableau-de-synthese.pdf"
+  tableauSynthese: "docs/Tableau_de_synthese_E5_OUAMAR_Yacine.xlsx", // ex : "docs/tableau-de-synthese.pdf"
 };
 
 /* CENTRES D'INTÉRÊT */
