@@ -9,7 +9,7 @@ const PROFIL = {
   nom: "Ouamar",
   titre: "Étudiant en BTS SIO option SISR · en alternance",
   accroche:
-    "Étudiant en 2ᵉ année de BTS SIO option SISR en alternance chez Harmonie Mutuelle. J'administre, sécurise et fais évoluer des infrastructures systèmes et réseaux.",
+    "Étudiant en 2ᵉ année de BTS SIO option SISR, en alternance chez Harmonie Mutuelle en tant quePoste chargé de projet SI.",
   apropos: [
     "Curieux et autonome, j'aime comprendre comment fonctionnent les systèmes et les réseaux, et trouver par moi-même des solutions aux problèmes que je rencontre.",
     "L'alternance me permet de faire le lien entre la théorie et le terrain : ce que j'apprends en formation, je le mets en pratique en entreprise, et chaque situation rencontrée en entreprise enrichit à son tour ma compréhension des cours.",
@@ -47,7 +47,8 @@ const INTERETS = [
 
 const FORMATION = [
   { date: "2025 – 2027", titre: "BTS SIO option SISR (en alternance)", lieu: "Ensitech, Montigny-le-Bretonneux", detail: "Services informatiques aux organisations – Solutions d'infrastructure, systèmes et réseaux." },
-  { date: "2021", titre: "Baccalauréat", lieu: "", detail: "" },
+  { date: "2021 – 2022", titre: "(1re année) BTS Comptabilité et Gestion", lieu: "La Plaine des Neauphle, Trappes", detail: "" },
+  { date: "2021", titre: "Baccalauréat", lieu:"", detail: "" },
 ];
 
 const STAGES = [
@@ -55,7 +56,11 @@ const STAGES = [
     date: "Depuis septembre 2025",
     titre: "Alternant – BTS SIO SISR",
     lieu: "Harmonie Mutuelle, Châtillon",
-    detail: "Gestion des droits d'accès des utilisateurs, appels d'API, automatisation de contrôles en VBA sous Excel, recette d'une interface.",
+    detail:"Gestion des droits d'accès des utilisateurs, appels d'API, automatisation des systèmes de contrôle, recette d'une interface.",
+    date: "2023 – 2025",
+    titre: "Gestionnaire en prévoyance",
+    lieu: "Mutex, Chatillon",
+    detail:"Gestion de dossiers d'assurés et utilisation quotidienne des applications métier."
   },
 ];
 
