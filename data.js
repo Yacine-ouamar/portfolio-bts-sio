@@ -239,6 +239,28 @@ const REALISATIONS = [
     docs: [],
   },
 
+  {
+    id: "veille",
+    titre: "Veille technologique : rançongiciels et fuites de données",
+    contexte: "Formation",
+    periode: "2025 – 2026",
+    resume: "Mise en place d'une veille sur les cyberattaques visant les organisations, en particulier dans le secteur de la santé.",
+    tags: ["Veille", "Cybersécurité", "CERT-FR", "Google Alertes"],
+    competences: ["C6"],
+    details: {
+      contexte: "Un technicien systèmes et réseaux doit se tenir informé des menaces pour protéger son organisation.",
+      objectifs: ["Choisir un sujet en lien avec mon alternance", "Mettre en place des outils de veille", "Sélectionner des sources fiables"],
+      etapes: [
+        "Choix du sujet : rançongiciels et fuites de données",
+        "Sélection de sources fiables (ANSSI, CERT-FR, Cybermalveillance.gouv.fr, presse spécialisée)",
+        "Mise en place de Google Alertes sur des mots-clés",
+        "Lecture régulière et synthèse des articles importants",
+      ],
+      resultat: "Une veille régulière, présentée dans la section « Veille » de ce portfolio.",
+    },
+    docs: [],
+  },
+
   /* ---------- EN ALTERNANCE (Harmonie Mutuelle) ---------- */
   {
     id: "droits",
@@ -359,10 +381,51 @@ const REALISATIONS = [
 ];
 
 const VEILLE = {
-  sujet: "À compléter",
-  intro: "",
-  outils: [],
+  definition:
+    "La veille technologique consiste à surveiller en permanence l'actualité d'un domaine pour anticiper les évolutions et les menaces. En informatique, c'est indispensable : une faille découverte aujourd'hui peut être exploitée demain contre l'organisation.",
+  methode:
+    "Je reçois les alertes et les articles automatiquement, je les trie en privilégiant les sources officielles, puis je note ce que je retiens. J'y consacre environ 20 minutes par jour.",
+  outils: [
+    { nom: "CERT-FR / ANSSI", role: "Alertes de sécurité officielles" },
+    { nom: "Cybermalveillance.gouv.fr", role: "Fiches réflexes et bonnes pratiques" },
+    { nom: "Le Monde Informatique", role: "Actualité IT et cyber" },
+    { nom: "Next / Siècle Digital", role: "Actualité du numérique" },
+    { nom: "Google Alertes", role: "Mots-clés : rançongiciel, fuite de données" },
+    { nom: "LinkedIn", role: "Experts et entreprises cyber" },
+  ],
+  sujet: "Les cyberattaques contre les organisations : rançongiciels et fuites de données",
+  intro:
+    "J'ai choisi ce sujet parce qu'il est en lien direct avec mon alternance : le secteur de la santé et des mutuelles est une cible privilégiée, car il détient des données très sensibles. Il rejoint aussi mon objectif de master en cybersécurité.",
+  apport:
+    "Ma veille m'a montré que les sauvegardes testées et la bonne gestion des droits d'accès font partie des premières protections. C'est ce que je mets en pratique avec Bacula et la gestion des habilitations chez Harmonie Mutuelle.",
   articles: [
-    // { date: "Nov. 2026", titre: "Titre", source: "Source", url: "https://...", resume: "Ce que j'en retiens." },
+    {
+      date: "Mars 2026",
+      titre: "L'ANSSI publie son Panorama de la cybermenace 2025",
+      source: "Siècle Digital",
+      url: "https://siecledigital.fr/2026/03/16/lanssi-alerte-sur-un-brouillage-des-menaces/",
+      resume: "Les rançongiciels restent très présents en France. La menace évolue surtout dans sa forme : les attaquants mélangent vol de données, extorsion et espionnage.",
+    },
+    {
+      date: "Mai 2026",
+      titre: "Piratage d'Almerys : des millions de données d'assurés exposées",
+      source: "Le Monde Informatique",
+      url: "https://www.lemondeinformatique.fr/actualites/lire-des-millions-de-donnees-exposees-apres-le-piratage-d-almerys-100250.html",
+      resume: "Almerys, qui gère le tiers payant de nombreuses complémentaires santé, a subi une cyberattaque. Une seule attaque chez un prestataire peut toucher des centaines de mutuelles : la sécurité des sous-traitants est essentielle.",
+    },
+    {
+      date: "Juin 2026",
+      titre: "Opération Endgame : Europol frappe l'écosystème des rançongiciels",
+      source: "Tech Insider",
+      url: "https://tech-insider.org/fr/operation-endgame-europol-2026/",
+      resume: "Europol et plusieurs pays, dont la France, ont démantelé des logiciels malveillants qui volent des identifiants et ouvrent la porte aux rançongiciels. Une attaque commence souvent par des identifiants volés.",
+    },
+    {
+      date: "Août 2026",
+      titre: "La mutuelle Solimut alerte sur une violation de données personnelles",
+      source: "Next",
+      url: "https://next.ink/brief-article/la-mutuelle-solimut-alerte-sur-une-violation-de-donnees-personnelles/",
+      resume: "Une mutuelle de plus de 500 000 adhérents a été victime d'une cyberattaque. Elle a dû notifier l'incident aux autorités et prévenir ses adhérents : c'est une obligation du RGPD.",
+    },
   ],
 };

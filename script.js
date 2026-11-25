@@ -170,23 +170,35 @@ $("#matrix").addEventListener("click", (e) => {
 });
 
 /* ---------- Veille ---------- */
-if (!VEILLE.intro && !VEILLE.articles.length) { $("#veille").remove(); document.querySelector('#menu a[href="#veille"]').remove(); }
+if (!VEILLE.articles.length) { $("#veille").remove(); document.querySelector('#menu a[href="#veille"]').remove(); }
 else $("#veille-content").innerHTML = `
-  <div class="card veille-intro">
-    <span class="mono accent small">Sujet</span>
+  <div class="veille-top">
+    <article class="card veille-card c-blue">
+      <div class="vc-head"><span class="vc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+      <h3>Qu'est-ce qu'une veille technologique ?</h3></div>
+      <p>${esc(VEILLE.definition)}</p>
+    </article>
+    <article class="card veille-card c-violet">
+      <div class="vc-head"><span class="vc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <h3>Qu'est-ce que j'utilise pour ma veille ?</h3></div>
+      <p>${esc(VEILLE.methode)}</p>
+      <ul class="tools">${VEILLE.outils.map((o) => `<li><strong>${esc(o.nom)}</strong><span>${esc(o.role)}</span></li>`).join("")}</ul>
+    </article>
+  </div>
+  <article class="card sujet-card">
+    <span class="mono accent small">Mon sujet</span>
     <h3>${esc(VEILLE.sujet)}</h3>
     <p>${esc(VEILLE.intro)}</p>
-    <h4>Outils de veille</h4>
-    <div class="tags">${VEILLE.outils.map((o) => `<span class="tag">${esc(o)}</span>`).join("")}</div>
-  </div>
-  <div class="veille-list">${VEILLE.articles
-    .map(
-      (a) => `<a class="card article" href="${esc(a.url)}" target="_blank">
-        <span class="mono small muted">${esc(a.date)} · ${esc(a.source)}</span>
+    ${VEILLE.apport ? `<p class="apport">💡 ${esc(VEILLE.apport)}</p>` : ""}
+  </article>
+  <h3 class="mt">Mes derniers articles</h3>
+  <div class="articles">${VEILLE.articles
+    .map((a) => `<a class="card article" href="${esc(a.url)}" target="_blank" rel="noopener">
+        <span class="mono small accent">${esc(a.date)} · ${esc(a.source)}</span>
         <h4>${esc(a.titre)}</h4>
         <p class="muted">${esc(a.resume)}</p>
-      </a>`
-    )
+        <span class="link">Lire l'article →</span>
+      </a>`)
     .join("")}</div>`;
 
 /* ---------- Contact & pied de page ---------- */
